@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marius Swanepoel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div id="container--main">
+        <a href="index.html">&#x2190; Go Back</a>
+        <h1>Used Accord .Net AI framework for Visual Regression</h1>
+
+        <ul>
+            <!-- <li><a href="#">Live Demo</a></li>
+                <li><a href="#">Source code</a></li> -->
+        </ul>
+        <strong>THE PROBLEM</strong>
+        <p>We had mobile games launching in an iframe. This however, presented us with an issue where we were unable to
+            interact with any of the objects within the iframe. The objective was to be able to determine at the very
+            least if the game launched successfully.</p>
+
+        <strong>THE SOLUTION</strong>
+        <p>I decided to have a look at image comparison solutions. The idea was to create image templates of sections
+            within the loaded game to do a pattern match within the image.
+            I created a solution where I loaded up the game from within the lobby, captured a screenshot after the
+            expected SLA. I then converted the image and the template I would like to match to Bitmap.
+        </p>
+        <p>This was followed
+            by converting the images to grey scale.
+            There was still one problem the image was not at the right scale to do a successful comparison. So, I
+            resized the images to match in scale. Finally, I compared the image template to the image to match the
+            pattern of the template within a range of 90% match.</p>
+
+        <strong>THE TECH</strong>
+        <div id="wrapper--techstack__items">
+            <div class="card--techstack"><span>C#, Nunit, Accord.Net, .Net Core</span></div>
+            <div class="card--techstack"><span>Selenium, Selenium Grid, SMTP client</span></div>
+            <div class="card--techstack"><span>Elastic, Kibana</span></div>
+            <div class="card--techstack"><span>GitLab</span></div>
+        </div>
+
+        <!-- <ul>
+            <li></li>
+        </ul> -->
+    </div>
+</body>
+
+</html>

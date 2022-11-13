@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marius Swanepoel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div id="container--main">
+        <a href="index.html">&#x2190; Go Back</a>
+        <h1>Built a Notification Sytem for Alerting</h1>
+
+        <ul>
+            <!-- <li><a href="#">Live Demo</a></li>
+                <li><a href="#">Source code</a></li> -->
+        </ul>
+        <strong>THE PROBLEM</strong>
+        <p>This wasn’t so much a problem that needed to be solved, but I was burning to find an opportunity to use AKA
+            .Net, which I thought was very powerful.
+            When our request to use the licensed production monitoring tools to monitor our client dev & certification
+            environments, I saw an opportunity to tackle this by using AKA .Net.
+        </p>
+        <strong>THE SOLUTION</strong>
+        <p>I created a monitoring app using AKA .Net to create an actor system that dynamically scales to the number of
+            servers and environments specified in a config file. This however, presented in challenge. The resources the
+            application was hosted on.</p>
+        <p>To solve this issue, I made the number of actors and nodes assigned to each actor configurable. This allowed
+            us to adapt the configuration according to the server spec it was running on.</p>
+        <p>This application would then read the servers for each configured environment from a SQL database, spawn the
+            actors to run a standard four (4) ping check on each server capturing the responses and response times. Any
+            check that failed will then be reported back by calling the notification API created with the result
+            alerting us via Teams and Outlook to which server and environment wasn’t operational.</p>
+
+        <strong>THE TECH</strong>
+        <div id="wrapper--techstack__items">
+            <div class="card--techstack"><span>C#, Aka .Net</span></div>
+            <div class="card--techstack"><span>.NetCore, SMTP client</span></div>
+            <div class="card--techstack"><span>OctaDeploy </span></div>
+            <div class="card--techstack"><span>Visual Studio</span></div>
+            <div class="card--techstack"><span>Outlook, Teams</span></div>
+        </div>
+
+        <!-- <ul>
+            <li></li>
+        </ul> -->
+    </div>
+</body>
+
+</html>
