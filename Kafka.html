@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Marius Swanepoel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div id="container--main">
+        <a href="index.html">&#x2190; Go Back</a>
+        <h1>Built a Notification Sytem for Alerting</h1>
+
+        <ul>
+            <!-- <li><a href="#">Live Demo</a></li>
+                <li><a href="#">Source code</a></li> -->
+        </ul>
+        <strong>THE PROBLEM</strong>
+        <p>This was during the time as a Senior Integrations specialist. We had to reprovision end to end environment
+            solutions for clients and certifications. Some of these activities required that we set up Kafka and
+            RabbitMQ feeds to stream triggered events to the clients’ targets. This process was extremely manual.
+        </p>
+        <p>We were also migrating all triggered event streaming from RabbitMQ to Kafka which meant we needed to support
+            both platforms during our state of transition until all clients were ready to deprecate the RabbitMQ feed.</p>
+
+        <strong>THE SOLUTION</strong>
+        <p>I started by using the Rabbit MQ API to create all the needed Topics, Queues and exchanges with the relevant
+            routing config via POSTMAN. This was then ported to C# and PowerShell. The reason for PowerShell was due to
+            modularity that was slotted into another automated solution that the team was comfortable with.</p>
+        <p>Following this I needed to achieve the same with Kafka. However, this was deployed and run on RedHat Linux.
+            For this I simply created a Bash Script to execute on the targeted server to configure the installation of
+            JDK, Kafka, starting of zookeeper, setting up all the path variables, starting Kafka and doing post
+            deployment checks</p>
+
+        <strong>THE TECH</strong>
+        <div id="wrapper--techstack__items">
+            <div class="card--techstack"><span>C#, Bash, PowerShell</span></div>
+            <div class="card--techstack"><span>.NetCore, REST Sharp, RedHat Linux</span></div>
+            <div class="card--techstack"><span>OctaDeploy </span></div>
+            <div class="card--techstack"><span>Visual Studio, Postman, Vim</span></div>
+        </div>
+
+        <!-- <ul>
+            <li></li>
+        </ul> -->
+    </div>
+</body>
+
+</html>
